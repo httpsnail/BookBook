@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Copyright (C) 2008 ZXing authors
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<!-- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+   
+    <Button
+       android:id="@+id/addBook"
+       android:text="@string/button"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       />
+</LinearLayout> -->
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="#ADD2FA">
+    <TextView
+        android:id="@+id/TextViewbegin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/addBook"
+        android:layout_alignTop="@+id/addBook"
+        android:layout_toLeftOf="@+id/addBook"
+        android:gravity="center"
+        android:text="@string/TextViewbegin"
+        android:textColor="#FCFCFC"
+        android:textStyle="bold" 
+        android:textSize="18dp"/>
+
+     <Button
+         android:id="@+id/addBook"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:text="@string/addBook" />
+
+<!--  <TextView
+         android:id="@+id/recordDB"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/checkBook" 	
+         android:background="#0968F7"
+          /> -->
+       <LinearLayout android:id="@+id/LinearLayoutContainer" android:background="#FFFFFF"
+        android:layout_width="fill_parent" android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/addBook">
+           
+       </LinearLayout>
+        <!--  <ListView  
+        android:id="@+id/listview"  
+        android:divider="#4C2626"  
+		android:dividerHeight="1dip"
+		android:layout_below="@+id/addBook"
+        android:layout_width="fill_parent"  
+        android:layout_height="fill_parent"  
+        android:background="#FEFEFE"
+        android:cacheColorHint="#FEFEFE" />   -->
+  
+     
+ </RelativeLayout>

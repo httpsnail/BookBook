@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="http://code.taobao.org/svn/bookbook"
+   name=""
+   revision="4"
+   last-author="zhangluxu"
+   url="http://code.taobao.org/svn/bookbook/trunk%20bookbook/BookBook/src/com/android/bookbook/util"
+   committed-rev="4"
+   kind="dir"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="DateUtil.java"
+   checksum="dcd36f20d8352185997e174637ceb5f0"
+   last-author="zhangluxu"
+   text-time="2013-01-22T08:43:02.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="HttpUtil.java"
+   checksum="c90fad6a3cdffe62ef248f67162479d6"
+   last-author="zhangluxu"
+   text-time="2013-01-23T05:57:06.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="ImageSimpleAdapter.java"
+   checksum="79305ece105adbdf6cdf598fe5bda1be"
+   last-author="zhangluxu"
+   text-time="2013-01-22T09:12:14.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="PicUtil.java"
+   checksum="2b42775a889ad90f1c3793277a9bd185"
+   last-author="zhangluxu"
+   text-time="2013-01-23T07:10:16.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+</wc-entries>

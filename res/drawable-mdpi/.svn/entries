@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="http://code.taobao.org/svn/bookbook"
+   revision="4"
+   last-author="zhangluxu"
+   url="http://code.taobao.org/svn/bookbook/trunk%20bookbook/BookBook/res/drawable-mdpi"
+   committed-rev="4"
+   kind="dir"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="dangdang.jpg"
+   checksum="43176611df802c02266578990dd39652"
+   last-author="zhangluxu"
+   text-time="2013-01-21T14:03:23.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"
+   prop-time="2013-01-25T02:00:41.000000Z"/>
+<entry
+   name="ic_launcher.png"
+   checksum="d0e97c42f858de3ee5fcd4d723d3f4fb"
+   last-author="zhangluxu"
+   text-time="2012-07-04T11:50:41.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"
+   prop-time="2013-01-25T02:00:40.000000Z"/>
+<entry
+   name="icon.png"
+   checksum="d0e97c42f858de3ee5fcd4d723d3f4fb"
+   last-author="zhangluxu"
+   text-time="2012-07-04T11:50:41.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"
+   prop-time="2013-01-25T02:00:41.000000Z"/>
+<entry
+   name="jingdong.jpg"
+   checksum="54797ea3eeaf1d752363d1c4013782cf"
+   last-author="zhangluxu"
+   text-time="2013-01-21T14:03:23.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"
+   prop-time="2013-01-25T02:00:41.000000Z"/>
+<entry
+   name="joyo.jpg"
+   checksum="57111c9055a6b91058428a5383162e8b"
+   last-author="zhangluxu"
+   text-time="2013-01-21T14:03:23.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"
+   prop-time="2013-01-25T02:00:42.000000Z"/>
+</wc-entries>

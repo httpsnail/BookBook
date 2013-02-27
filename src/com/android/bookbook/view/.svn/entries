@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="http://code.taobao.org/svn/bookbook"
+   name=""
+   revision="4"
+   last-author="zhangluxu"
+   url="http://code.taobao.org/svn/bookbook/trunk%20bookbook/BookBook/src/com/android/bookbook/view"
+   committed-rev="4"
+   kind="dir"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="ViewfinderResultPointCallback.java"
+   checksum="8448e37856d15534271c8820683caff7"
+   last-author="zhangluxu"
+   text-time="2013-01-22T09:16:05.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="ViewfinderView.java"
+   checksum="158db2487e24c685b5f0df35a79523d0"
+   last-author="zhangluxu"
+   text-time="2013-01-22T09:33:15.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+</wc-entries>

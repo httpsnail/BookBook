@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="http://code.taobao.org/svn/bookbook"
+   revision="4"
+   last-author="zhangluxu"
+   url="http://code.taobao.org/svn/bookbook/trunk%20bookbook/BookBook/src/com/android/bookbook/activity"
+   committed-rev="4"
+   kind="dir"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="AddtoShelf.java"
+   checksum="5c7d69e71b0ac36490572a343a815187"
+   last-author="zhangluxu"
+   text-time="2013-01-23T03:48:35.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="CaptureActivity.java"
+   checksum="d23c55971c37c517fff4629ae17d24de"
+   last-author="zhangluxu"
+   text-time="2013-01-23T03:49:00.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="EntryActivity.java"
+   checksum="4a21a6d8e3acc1703e4dd2bbda92f7bc"
+   last-author="zhangluxu"
+   text-time="2013-01-23T03:49:13.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="InputISBNActivity.java"
+   checksum="7bedba8bcbca50392ae7ea921edded54"
+   last-author="zhangluxu"
+   text-time="2013-01-23T03:49:29.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="ShowBook.java"
+   checksum="21d0532118939b6dd000fbcbe7f4a0f1"
+   last-author="zhangluxu"
+   text-time="2013-01-23T03:49:37.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="SuccessActivity.java"
+   checksum="f8cbf6d9c8d94e0ee448240daa85e2c3"
+   last-author="zhangluxu"
+   text-time="2013-01-23T07:53:19.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="Test.java"
+   checksum="0a583c8ce22f9e4dba895c2ac934ec41"
+   last-author="zhangluxu"
+   text-time="2013-01-22T10:12:43.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+</wc-entries>

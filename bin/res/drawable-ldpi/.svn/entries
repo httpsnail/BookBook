@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="http://code.taobao.org/svn/bookbook"
+   revision="4"
+   schedule="delete"
+   last-author="zhangluxu"
+   url="http://code.taobao.org/svn/bookbook/trunk%20bookbook/BookBook/bin/res/drawable-ldpi"
+   committed-rev="4"
+   kind="dir"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="ic_launcher.png"
+   schedule="delete"
+   last-author="zhangluxu"
+   text-time="2013-01-22T09:23:34.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"
+   checksum="5a66ca46c1273594f2a9f40b9e14a38b"
+   prop-time="2013-01-25T02:00:43.000000Z"/>
+<entry
+   name="icon.png"
+   schedule="delete"
+   last-author="zhangluxu"
+   text-time="2013-01-22T09:23:34.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"
+   checksum="5a66ca46c1273594f2a9f40b9e14a38b"
+   prop-time="2013-01-25T02:00:41.000000Z"/>
+</wc-entries>

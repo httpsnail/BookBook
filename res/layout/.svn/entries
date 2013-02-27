@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="http://code.taobao.org/svn/bookbook"
+   name=""
+   revision="4"
+   last-author="zhangluxu"
+   url="http://code.taobao.org/svn/bookbook/trunk%20bookbook/BookBook/res/layout"
+   committed-rev="4"
+   kind="dir"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="addtoshelf.xml"
+   checksum="680b03f308bcd695fadc998cabbf3d54"
+   last-author="zhangluxu"
+   text-time="2013-01-21T14:03:23.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="b2citem.xml"
+   checksum="66af80eaa7948dc543155db76e30750a"
+   last-author="zhangluxu"
+   text-time="2013-01-21T14:03:23.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="b2clistview.xml"
+   checksum="2b226523b9b986946e4bc8c7a95756f0"
+   last-author="zhangluxu"
+   text-time="2013-01-21T14:03:23.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="entry.xml"
+   checksum="62f8ec899f8ad2de92e681ff931cea8c"
+   last-author="zhangluxu"
+   text-time="2013-01-21T14:03:23.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="initview.xml"
+   checksum="73dc97c48cf08e53220f84adc2310191"
+   last-author="zhangluxu"
+   text-time="2013-01-21T14:03:23.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="inputisbnactivity.xml"
+   checksum="5e67ddb02539f0d2268e79d71d7e34ce"
+   last-author="zhangluxu"
+   text-time="2012-07-04T11:50:41.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="item.xml"
+   checksum="ba20fa6cea3e0c6f91d74a1ab964816a"
+   last-author="zhangluxu"
+   text-time="2013-01-21T14:03:23.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="listview.xml"
+   checksum="2f92f9ab3953c811baab68343a3b36cf"
+   last-author="zhangluxu"
+   text-time="2013-01-21T14:03:23.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="main.xml"
+   checksum="3792284ead60fd7dbf23a416f03604cc"
+   last-author="zhangluxu"
+   text-time="2013-01-22T09:46:02.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="message_list.xml"
+   checksum="c9af281c38e7b9d88e3ff99b812fdb4e"
+   last-author="zhangluxu"
+   text-time="2013-01-21T14:03:23.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="showbook.xml"
+   checksum="6ab951617229a204d68e13fde33e7859"
+   last-author="zhangluxu"
+   text-time="2013-01-21T14:03:23.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="success.xml"
+   checksum="fa124e1a20565e4c99439fe7628cdd1f"
+   last-author="zhangluxu"
+   text-time="2013-01-21T14:03:23.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="test.xml"
+   checksum="467e94804a68af9ed9a121cfc3c02e16"
+   last-author="zhangluxu"
+   text-time="2012-08-15T11:43:42.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="theme_panel.xml"
+   checksum="d5e6ccbd7d96a53749c8996c584df0ec"
+   last-author="zhangluxu"
+   text-time="2013-01-21T14:03:23.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+</wc-entries>

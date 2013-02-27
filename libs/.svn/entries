@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="http://code.taobao.org/svn/bookbook"
+   name=""
+   revision="4"
+   last-author="zhangluxu"
+   url="http://code.taobao.org/svn/bookbook/trunk%20bookbook/BookBook/libs"
+   committed-rev="4"
+   kind="dir"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="core.jar"
+   checksum="0cb1fccf8a982758e05f88a3c37e12a3"
+   last-author="zhangluxu"
+   text-time="2012-08-15T11:43:42.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"
+   prop-time="2013-01-25T02:00:42.000000Z"/>
+<entry
+   name="fastjson-1.1.17.jar"
+   checksum="3c6383914ed4762943293ed8bf9bca97"
+   last-author="zhangluxu"
+   text-time="2013-01-04T03:07:16.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"
+   prop-time="2013-01-25T02:00:42.000000Z"/>
+</wc-entries>

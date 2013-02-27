@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="http://code.taobao.org/svn/bookbook"
+   name=""
+   revision="4"
+   last-author="zhangluxu"
+   url="http://code.taobao.org/svn/bookbook/trunk%20bookbook/BookBook/src/com/android/bookbook/DBHelper"
+   committed-rev="4"
+   kind="dir"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="DBListHelper.java"
+   checksum="2742108ff157191f9f86cec1ce941527"
+   last-author="zhangluxu"
+   text-time="2013-01-22T09:14:40.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+<entry
+   name="DBbookHelper.java"
+   checksum="7132b52dde082548ffaf05f2870101f1"
+   last-author="zhangluxu"
+   text-time="2013-01-22T09:14:40.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2013-01-25T02:01:01.134000Z"/>
+</wc-entries>
