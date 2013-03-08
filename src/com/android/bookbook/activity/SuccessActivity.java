@@ -53,7 +53,7 @@ import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONObject;
 import com.android.bookbook.R;
-import com.android.bookbook.DBHelper.DBbookHelper;
+import com.android.bookbook.database.DBbookHelper;
 import com.android.bookbook.model.BookInfo;
 import com.android.bookbook.util.HttpUtil;
 import com.android.bookbook.util.PicUtil;

@@ -9,6 +9,7 @@ public class BookInfo implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 8568074413308677580L;
+	private Integer id;
 	private String bookName;
 	private String author;
 	private String url;
@@ -17,6 +18,13 @@ public class BookInfo implements Serializable{
 	private String summary;
 	private String imageUrl;
 	
+	public Integer getId() {
+		return id;
+	}
+	
+	public void setId(Integer id){
+		this.id = id;
+	}
 	public String getSummary() {
 	    return summary;
 	}

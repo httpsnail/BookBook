@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.HashMap;
 
 import com.android.bookbook.R;
-import com.android.bookbook.DBHelper.DBbookHelper;
+import com.android.bookbook.database.DBbookHelper;
 import com.android.bookbook.model.BookInfo;
 
 import android.app.Activity;

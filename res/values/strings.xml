@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="hello">Hello World, CaptureActivity!</string>
     <string name="app_name">BookBook</string>
     <string name="addBook">添加</string>
-    <string name="entry">书记 V 0.1</string>
+    <string name="entry">BookBook</string>
     <string name="success">扫描成功</string>
     <string name="TextViewbegin">我的书架</string>
     <string name="searchDOUBAN">查询</string>
     <string name="addToShelf">加入书架</string>
     <string name="checkBook">查看书架信息</string>
     <string name="showbook">书籍信息</string>
+    <string name="no_data">您的书架还是空的</string>
+    <string name="sure_delete">确定删除</string>
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
+
 </resources>

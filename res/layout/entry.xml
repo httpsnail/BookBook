@@ -58,21 +58,21 @@
          android:layout_below="@+id/checkBook" 	
          android:background="#0968F7"
           /> -->
-       <LinearLayout android:id="@+id/LinearLayoutContainer" android:background="#FFFFFF"
+<!--        <LinearLayout android:id="@+id/LinearLayoutContainer" android:background="#FFFFFF"
         android:layout_width="fill_parent" android:layout_height="fill_parent"
         android:orientation="vertical"
         android:layout_below="@+id/addBook">
            
-       </LinearLayout>
-        <!--  <ListView  
-        android:id="@+id/listview"  
+       </LinearLayout> -->
+        <ListView  
+        android:id="@+id/book_listview"  
         android:divider="#4C2626"  
 		android:dividerHeight="1dip"
 		android:layout_below="@+id/addBook"
         android:layout_width="fill_parent"  
         android:layout_height="fill_parent"  
         android:background="#FEFEFE"
-        android:cacheColorHint="#FEFEFE" />   -->
+        android:cacheColorHint="#FEFEFE" />   
   
      
  </RelativeLayout>

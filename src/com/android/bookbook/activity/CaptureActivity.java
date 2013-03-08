@@ -25,8 +25,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.bookbook.R;
-import com.android.bookbook.DBHelper.DBbookHelper;
 import com.android.bookbook.camera.CameraManager;
+import com.android.bookbook.database.DBbookHelper;
 import com.android.bookbook.decoding.CaptureActivityHandler;
 import com.android.bookbook.decoding.InactivityTimer;
 import com.android.bookbook.model.BookInfo;
