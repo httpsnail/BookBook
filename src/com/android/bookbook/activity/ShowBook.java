@@ -51,7 +51,6 @@ public class ShowBook extends Activity{
 		 spec.setContent(R.id.BookComments);
 		 spec.setIndicator("书评",null);
 		 tabs.addTab(spec);
-		 //步骤3：可通过setCurrentTab(index)指定显示的页，从0开始计算。
 		 tabs.setCurrentTab(0);
 		 //设置一个progressdialog的弹窗  
 		 

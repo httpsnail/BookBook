@@ -16,6 +16,7 @@
 
 package com.android.bookbook.camera;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Point;
 import android.hardware.Camera;
@@ -24,6 +25,7 @@ import android.util.Log;
 import android.view.Display;
 import android.view.WindowManager;
 
+import java.lang.reflect.Method;
 import java.util.regex.Pattern;
 
 final class CameraConfigurationManager {
@@ -67,7 +69,9 @@ final class CameraConfigurationManager {
    * LuminanceSource subclass. In the future we may want to force YUV420SP as it's the smallest,
    * and the planar Y can be used for barcode scanning without a copy in some cases.
    */
-  void setDesiredCameraParameters(Camera camera) {
+  @SuppressLint("NewApi")
+void setDesiredCameraParameters(Camera camera) {
+	
     Camera.Parameters parameters = camera.getParameters();
     Log.d(TAG, "Setting preview size: " + cameraResolution);
     parameters.setPreviewSize(cameraResolution.x, cameraResolution.y);
@@ -75,7 +79,10 @@ final class CameraConfigurationManager {
     setZoom(parameters);
     //setSharpness(parameters);
     camera.setParameters(parameters);
+    //camera.setDisplayOrientation(90);
   }
+  
+
 
   Point getCameraResolution() {
     return cameraResolution;

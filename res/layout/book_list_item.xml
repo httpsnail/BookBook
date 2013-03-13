@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="100dp"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.2dp"
+        android:background="#FFFFFFFF" >
+    </View>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingBottom="4dip"
+        android:paddingLeft="12dip"
+        android:paddingRight="12dip" >
+
+        <ImageView
+            android:id="@+id/bookImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="20dp"
+             />
+
+        <TextView
+            android:id="@+id/bookNameTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/bookImageView"
+            android:layout_toRightOf="@+id/bookImageView"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/authorNameTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/bookNameTextView"
+            android:layout_below="@+id/bookNameTextView"
+            android:textColor="#000000" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.2dp"
+        android:background="#B7B9B9" >
+    </View>
+
+</LinearLayout>

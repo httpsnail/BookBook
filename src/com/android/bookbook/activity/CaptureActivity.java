@@ -108,8 +108,6 @@ public class CaptureActivity extends Activity implements Callback {
 
 	private void initCamera(SurfaceHolder surfaceHolder) {
 		try {
-			Log.v("TEST", "OK");
-
 			CameraManager.get().openDriver(surfaceHolder);
 		} catch (IOException ioe) {
 			return;
@@ -179,8 +177,8 @@ public class CaptureActivity extends Activity implements Callback {
 		    	//bookinfo.setImage( BitmapFactory.decodeFile(imagePath));
 		    	bookinfo.setISBN(obj.getText());
 		    	bookinfo.setBookName(c.getString(c.getColumnIndex("name")));
-		    	bookinfo.setSummary(c.getString(c.getColumnIndex("summary")));
-		    	System.out.println(bookinfo.getSummary());
+		    	bookinfo.setSummary(c.getString(c.getColumnIndex("summary")));	
+		    	
 			Intent intent = new Intent(CaptureActivity.this, ShowBook.class);	
 			intent.putExtra("isExist",true);
 			intent.putExtra("bookinfo", bookinfo);
@@ -189,7 +187,7 @@ public class CaptureActivity extends Activity implements Callback {
 		}
 		else{
 			
-			Intent intent = new Intent(CaptureActivity.this, SuccessActivity.class);
+			Intent intent = new Intent(CaptureActivity.this, SearchBookInfoActivity.class);
 			intent.putExtra("result",obj.getText());
 			CaptureActivity.this.startActivity(intent);
 			//txtResult.setText("正在查找....");			

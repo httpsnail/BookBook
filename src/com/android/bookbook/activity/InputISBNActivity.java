@@ -59,7 +59,7 @@ public class InputISBNActivity extends Activity implements Serializable{
 						InputISBNActivity.this.finish();
 					}
 					else{
-						Intent intent = new Intent(InputISBNActivity.this, SuccessActivity.class);
+						Intent intent = new Intent(InputISBNActivity.this, SearchBookInfoActivity.class);
 						intent.putExtra("result",ISBN);
 						InputISBNActivity.this.startActivity(intent);
 						InputISBNActivity.this.finish();
