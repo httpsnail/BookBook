@@ -2,7 +2,12 @@ package com.android.bookbook.database;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.android.bookbook.activity.MainActivity;
+import com.android.bookbook.activity.SearchBookInfoActivity;
 import com.android.bookbook.model.BookInfo;
+
+import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -24,7 +29,8 @@ public class OperateFavor extends DbBase {
 						"url", // 2
 						"author", // 3
 						"ISBN",// 4
-						"summary" // 5
+						"summary", // 5
+						"imageUrl" //6
 				}, null, null, null, null, null);
 
 		List<BookInfo> list = new ArrayList<BookInfo>();
@@ -37,6 +43,7 @@ public class OperateFavor extends DbBase {
 				// bookinfo.setImage(image);
 				bookinfo.setISBN(cursor.getString(4));
 				bookinfo.setSummary(cursor.getString(5));
+				bookinfo.setImageUrl(cursor.getString(6));
 				list.add(bookinfo);
 			}
 			cursor.close();
@@ -44,8 +51,24 @@ public class OperateFavor extends DbBase {
 		return list;
 	}
 
-	/* 更新操作 */
+	/* 插入操作 */
+	
+	public void insertIntoBookList(BookInfo bookinfo){
+		ContentValues values = new ContentValues();
+		values.put("author", bookinfo.getAuthor());
+		values.put("name", bookinfo.getBookName());
+		values.put("url", bookinfo.getUrl());
+		values.put("imageUrl", bookinfo.getImageUrl());
+		values.put("ISBN", bookinfo.getISBN());
+		values.put("summary", bookinfo.getSummary());
+		getSQLiteDatabase().insert("bookinfos", null, values);
+	}
 
 	/* 删除操作 */
+	public void delteteBook(String table,String column,String value){		
+		String[] args = { value };
+		DbBase.getSQLiteDatabase().delete(table,column+"=?",args);
+		
+	}
 
 }

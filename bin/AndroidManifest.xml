@@ -9,11 +9,9 @@
     <application
         android:name=".BookbookApp"
         android:icon="@drawable/icon"
-        android:label="@string/app_name" 
-       >
-        
+        android:label="@string/app_name" >
         <activity
-            android:name=".activity.EntryActivity"
+            android:name=".activity.MainActivity"
             android:label="@string/entry"
             android:theme="@android:style/Theme.NoTitleBar" >
             <intent-filter>
@@ -35,16 +33,23 @@
             android:windowSoftInputMode="stateAlwaysHidden" >
         </activity>
         <activity
+            android:name=".activity.BookShelfActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
             android:name=".Test"
             android:windowSoftInputMode="stateAlwaysHidden" >
         </activity>
         <activity
             android:name="com.android.bookbook.activity.SearchBookInfoActivity"
-            android:label="@string/success" >
+            android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
             android:name="com.android.bookbook.activity.ShowBook"
             android:label="@string/showbook" >
+        </activity>
+        <activity
+            android:name="com.android.bookbook.activity.BuyBookActivity">
         </activity>
     </application>
 
@@ -56,6 +61,7 @@
     </uses-permission>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
     </uses-permission>
+
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 

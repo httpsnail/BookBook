@@ -10,7 +10,7 @@ import android.util.Log;
 public class DBbookHelper extends SQLiteOpenHelper {
 
    private static final String DATABASE_NAME = "shuji.db";
-   private static final int DATABASE_VERSION = 1;
+   private static final int DATABASE_VERSION = 3;
    private static final String TABLE_NAME = "bookinfos";
    public static final String FIELD_TITLE = "title";
    public static final String FIELD_name = "name";
@@ -44,7 +44,7 @@ public class DBbookHelper extends SQLiteOpenHelper {
    public void onCreate(SQLiteDatabase db) {
 	   Log.d("init","init the database");
 	  // db.execSQL("CREATE TABLE IF NOT EXISTS bookinfo (bookinfo integer primary key autoincrement, name varchar(20), author varchar(20),url varchar(20))");  
-	   db.execSQL("CREATE TABLE IF NOT EXISTS bookinfos (id integer primary key autoincrement, name varchar(20), author varchar(20),url varchar(20), ISBN varchar(20),summary text)");  
+	   db.execSQL("CREATE TABLE IF NOT EXISTS bookinfos (id integer primary key autoincrement, name varchar(20), author varchar(20),url varchar(20),imageUrl varchar(50),doubanId varchar(10),ISBN varchar(20),summary text)");  
 	   //db.execSQL("CREATE TABLE IF NOT EXISTS info_list (id integer primary key autoincrement, name varchar(20), author varchar(20),url varchar(20))");  
    }
  

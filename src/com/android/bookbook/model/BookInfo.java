@@ -17,7 +17,16 @@ public class BookInfo implements Serializable{
 	private Bitmap image;
 	private String summary;
 	private String imageUrl;
+	private String doubanId;
 	
+	public String getDoubanId() {
+		return doubanId;
+	}
+
+	public void setDoubanId(String doubanId) {
+		this.doubanId = doubanId;
+	}
+
 	public Integer getId() {
 		return id;
 	}

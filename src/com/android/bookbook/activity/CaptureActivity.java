@@ -1,6 +1,7 @@
 package com.android.bookbook.activity;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Vector;
 
 import android.app.Activity;
@@ -20,13 +21,12 @@ import android.view.SurfaceHolder.Callback;
 import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.bookbook.R;
 import com.android.bookbook.camera.CameraManager;
 import com.android.bookbook.database.DBbookHelper;
+import com.android.bookbook.database.OperateFavor;
 import com.android.bookbook.decoding.CaptureActivityHandler;
 import com.android.bookbook.decoding.InactivityTimer;
 import com.android.bookbook.model.BookInfo;
@@ -54,19 +54,20 @@ public class CaptureActivity extends Activity implements Callback {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		
-		//初始化CameraManager
+
+		// 初始化CameraManager
 		CameraManager.init(getApplication());
 		viewfinderView = (ViewfinderView) findViewById(R.id.viewfinder_view);
 		txtResult = (TextView) findViewById(R.id.txtResult);
 		hasSurface = false;
 		inactivityTimer = new InactivityTimer(this);
-	
-		
+
 	}
-	public void dosomething(View btn){
-		
+
+	public void dosomething(View btn) {
+
 	}
+
 	@Override
 	protected void onResume() {
 		super.onResume();
@@ -117,14 +118,12 @@ public class CaptureActivity extends Activity implements Callback {
 		if (handler == null) {
 			Log.v("TEST", "OK1");
 
-			handler = new CaptureActivityHandler(this, decodeFormats,
-					characterSet);
+			handler = new CaptureActivityHandler(this, decodeFormats, characterSet);
 		}
 	}
 
 	@Override
-	public void surfaceChanged(SurfaceHolder holder, int format, int width,
-			int height) {
+	public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
 
 	}
 
@@ -159,42 +158,35 @@ public class CaptureActivity extends Activity implements Callback {
 	public void handleDecode(Result obj, Bitmap barcode) {
 		inactivityTimer.onActivity();
 		viewfinderView.drawResultBitmap(barcode);
-		 playBeepSoundAndVibrate();
-		txtResult.setText(obj.getBarcodeFormat().toString() + ":"
-				+ obj.getText());
+		playBeepSoundAndVibrate();
+		txtResult.setText(obj.getBarcodeFormat().toString() + ":" + obj.getText());
+		OperateFavor operFav = new OperateFavor();
+		List<BookInfo> bookList = operFav.queryBookList();
+		boolean flag = false;
+		if (bookList != null && bookList.size() > 0) {
+			for (int i = 0; i < bookList.size(); i++) {
+				if (bookList.get(i).getISBN() == obj.getText() || bookList.get(i).getISBN().equals(obj.getText())) {
+					Intent intent = new Intent(CaptureActivity.this, ShowBook.class);
+					intent.putExtra("isExist", true);
+					intent.putExtra("bookinfo", bookList.get(i));
+					CaptureActivity.this.startActivity(intent);
+					CaptureActivity.this.finish();
+					flag = true;
+				}
+			}
+			if (!flag) {
+				Intent intent = new Intent(CaptureActivity.this, SearchBookInfoActivity.class);
+				intent.putExtra("result", obj.getText());
+				CaptureActivity.this.startActivity(intent);
+				CaptureActivity.this.finish();
+			}
 
-		
-		DBbookHelper mDBHelper=new DBbookHelper(CaptureActivity.this);
-		String[] parms={obj.getText()}; 
-		Cursor c = mDBHelper.getReadableDatabase().query(
-				"bookinfos",new String[]{"id","name","url","author","ISBN","summary"},"ISBN=?",parms,null,null,null); 					
-
-		if(c.moveToNext()){
-			BookInfo bookinfo =new BookInfo();
-		    	bookinfo.setAuthor(c.getString(c.getColumnIndex("author")));
-		    	String imagePath = "/sdcard/shuji/images/"
-			    + c.getString(c.getColumnIndex("ISBN")) + ".jpg";
-		    	//bookinfo.setImage( BitmapFactory.decodeFile(imagePath));
-		    	bookinfo.setISBN(obj.getText());
-		    	bookinfo.setBookName(c.getString(c.getColumnIndex("name")));
-		    	bookinfo.setSummary(c.getString(c.getColumnIndex("summary")));	
-		    	
-			Intent intent = new Intent(CaptureActivity.this, ShowBook.class);	
-			intent.putExtra("isExist",true);
-			intent.putExtra("bookinfo", bookinfo);
-			CaptureActivity.this.startActivity(intent);		
-			CaptureActivity.this.finish();
-		}
-		else{
-			
+		} else {
 			Intent intent = new Intent(CaptureActivity.this, SearchBookInfoActivity.class);
-			intent.putExtra("result",obj.getText());
+			intent.putExtra("result", obj.getText());
 			CaptureActivity.this.startActivity(intent);
-			//txtResult.setText("正在查找....");			
 			CaptureActivity.this.finish();
 		}
-		mDBHelper.close();
-		
 	}
 
 	private void initBeepSound() {
@@ -207,11 +199,9 @@ public class CaptureActivity extends Activity implements Callback {
 			mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 			mediaPlayer.setOnCompletionListener(beepListener);
 
-			AssetFileDescriptor file = getResources().openRawResourceFd(
-					R.raw.beep);
+			AssetFileDescriptor file = getResources().openRawResourceFd(R.raw.beep);
 			try {
-				mediaPlayer.setDataSource(file.getFileDescriptor(),
-						file.getStartOffset(), file.getLength());
+				mediaPlayer.setDataSource(file.getFileDescriptor(), file.getStartOffset(), file.getLength());
 				file.close();
 				mediaPlayer.setVolume(BEEP_VOLUME, BEEP_VOLUME);
 				mediaPlayer.prepare();

@@ -1,8 +1,12 @@
 package com.android.bookbook.view.adapter;
 
 import java.util.List;
+
+import com.alibaba.fastjson.JSONObject;
 import com.android.bookbook.R;
 import com.android.bookbook.model.BookInfo;
+import com.android.bookbook.util.ImageManager2;
+
 import android.content.Context;
 import android.graphics.BitmapFactory;
 import android.util.Log;
@@ -32,7 +36,6 @@ public class BookListAdapter extends ArrayAdapter<BookInfo> {
 		public ImageView bookImage;
 		public TextView bookTitle;
 		public TextView bookAuthor;
-
 	}
 
 	@Override
@@ -51,11 +54,21 @@ public class BookListAdapter extends ArrayAdapter<BookInfo> {
 		if (mListData == null || position >= mListData.size())
 			return convertView;
 		BookInfo bookinfo = mListData.get(position);
-		String imagePath = "/sdcard/shuji/images/"
+/*		String imagePath = "/sdcard/shuji/images/"
 				+ bookinfo.getISBN() + ".jpg";
 		if(imagePath.length()>10){
 			holder.bookImage.setImageBitmap(BitmapFactory.decodeFile(imagePath));		
-		}	
+		}	*/
+		
+		JSONObject resultJson = JSONObject.parseObject(bookinfo.getImageUrl());
+		// 取中间像素的图片
+		if(resultJson!=null){
+			String bookImageURl = resultJson.getString("medium");
+			if (bookImageURl != null) {
+				ImageManager2.from().displayImage(holder.bookImage, bookImageURl, -1);
+			}
+		}
+
 		holder.bookAuthor.setText(bookinfo.getAuthor());
 		holder.bookTitle.setText(bookinfo.getBookName());
 		return convertView;

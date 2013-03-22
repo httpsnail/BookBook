@@ -217,6 +217,8 @@ public class ImageManager2 {
 
 		queueImage(new ImageRef(imageView, url, filePath, resId));
 	}
+	
+	
 
 	private Bitmap blackBgBmp;
 
