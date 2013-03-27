@@ -1,22 +1,14 @@
 package com.android.bookbook.activity;
-
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.InputStreamReader;
 import java.io.Serializable;
+import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -33,15 +25,12 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TabHost;
-import android.widget.TabWidget;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.alibaba.fastjson.JSONObject;
 import com.android.bookbook.BookbookApp;
 import com.android.bookbook.R;
@@ -146,7 +135,6 @@ public class SearchBookInfoActivity extends Activity implements Serializable {
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 				Intent intent = new Intent();
 				buyurl = (String) priceList.get(arg2).get("MarketLink");
-				Log.e("buyurl", buyurl);
 				intent.putExtra("buyurl", buyurl);
 				intent.setClass(SearchBookInfoActivity.this, BuyBookActivity.class);
 				SearchBookInfoActivity.this.startActivity(intent);
@@ -183,7 +171,7 @@ public class SearchBookInfoActivity extends Activity implements Serializable {
 
 	/* 获取比价信息 */
 	private void getResultBySubject() {
-
+		
 		try {
 			String response = HttpUtil.getMethod(BookbookApiUtil.getBookPriceApiHost(bookinfo.getDoubanId()));
 			priceList = new ArrayList<Map<String, Object>>();
@@ -205,8 +193,27 @@ public class SearchBookInfoActivity extends Activity implements Serializable {
 					map.put("PIC", R.drawable.dangdang);
 				}
 				map.put("Price", m.group(5));
-				Log.e("m.group(5)", m.group(5));
 				map.put("MarketLink", m.group(4));
+				//Log.e("Url", URLDecoder.decode(m.group(4), "UTF-8"));
+				String tempUrl = URLDecoder.decode(m.group(4), "UTF-8");
+				String regexParttern ="http://www.douban.com/([\\s\\S]*?)url=(.*)";
+				Pattern p1 = Pattern.compile(regexParttern);
+				Matcher m1 = p1.matcher(tempUrl);
+				while(m1.find()){
+					String tempBookUrl=m1.group(2);
+					String bookUrl=tempBookUrl;
+					if(tempBookUrl.contains("P-306226-0-s6021440")){
+						bookUrl = tempBookUrl.replaceAll("P-306226", "p-314973");
+					}
+					if(tempBookUrl.contains("douban-23")){
+						bookUrl = tempBookUrl.replaceAll("douban-23", "bookbook-23");
+					}
+					
+					//to do jingdong
+					
+					map.put("MarketLink", bookUrl);
+					Log.e("MarketLink", bookUrl);
+				}
 				priceList.add(map);
 			}
 			adapter = new SimpleAdapter(this, (List<Map<String, Object>>) priceList, R.layout.b2citem, new String[] { "PIC", "Price" }, new int[] { R.id.b2cImage, R.id.price });

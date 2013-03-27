@@ -1,16 +1,12 @@
 package com.android.bookbook;
-
 import java.lang.reflect.Method;
 import java.net.URLEncoder;
-
 import com.android.bookbook.util.HttpUtil;
 import com.android.bookbook.util.PicUtil;
 import com.android.bookbook.util.SharedPreferencesUtil;
-
 import android.app.Application;
 import android.app.NotificationManager;
 import android.content.Context;
-import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
@@ -22,7 +18,6 @@ import android.telephony.TelephonyManager;
 
 
 public class BookbookApp extends Application  {
-
 	// 手机信息
 	public String app;
 	public String device;
@@ -40,12 +35,8 @@ public class BookbookApp extends Application  {
 	public String message;
 	public String uMeng;
 	public String networkTypeString;
-
 	private static BookbookApp _instance;
-
-
 	private NotificationManager notificationManager;
-
 	public SharedPreferencesUtil sharedPreferencesUtil;
 
 	public static BookbookApp getInstance() {
