@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/success_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bar_up" >
+
+        <TextView
+            android:id="@+id/TitleBarText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bar_up"
+            android:gravity="center"
+            android:text="@string/success"
+            android:textColor="#FCFCFC"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/my_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/titlebar_left"
+            android:gravity="center"
+            android:scaleType="center"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/button_text_size" />
+         <TextView
+            android:id="@+id/addToShelf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/titlebar_right"
+            android:gravity="center"
+            android:scaleType="center"
+            android:text="@string/add"
+            android:textColor="@color/white"
+            android:textSize="@dimen/button_text_size" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/BookImage"
+        android:layout_width="wrap_content"
+        android:layout_height="65dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/success_layout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/bookNameTextview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/BookImage"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/BookImage"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/authorTextview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bookNameTextview"
+        android:layout_below="@+id/bookNameTextview"
+        android:layout_marginTop="5dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/ISBNTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/authorTextview"
+        android:layout_below="@+id/authorTextview"
+        android:layout_marginTop="5dp"
+        android:textColor="#000000" />
+
+
+
+    <TabHost
+        android:id="@+id/c92_tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/ISBNTextview"
+        android:layout_marginTop="20dp" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp" >
+
+                <TextView
+                    android:id="@+id/Summary"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+
+                <ListView
+                    android:id="@+id/DoubanListview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FEFEFE"
+                    android:cacheColorHint="#FEFEFE"
+                    android:divider="#4C2626"
+                    android:dividerHeight="1dip" />
+
+                <ListView
+                    android:id="@+id/MarketListview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FEFEFE"
+                    android:cacheColorHint="#FEFEFE"
+                    android:divider="#4C2626"
+                    android:dividerHeight="1dip" />
+            </FrameLayout>
+        </RelativeLayout>
+    </TabHost>
+
+</RelativeLayout>

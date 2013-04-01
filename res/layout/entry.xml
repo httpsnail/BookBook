@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ADD2FA"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/TextViewbegin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/TextViewbegin"
+        android:textColor="#FCFCFC"
+        android:background="@drawable/bar_up"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/book_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/TextViewbegin"
+        android:background="#FEFEFE"
+        android:cacheColorHint="#FEFEFE"
+        android:divider="#4C2626"
+        android:dividerHeight="1dip" />
+
+</RelativeLayout>
